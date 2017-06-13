@@ -1,5 +1,12 @@
-{
-    "Name" : "nonameo",
-    "IsTrue": false,
-    "Count": 1
-}
+[
+    {
+        "Name": "nonameo",
+        "IsTrue": false,
+        "Count": 1
+    },
+    {
+        "Name": "somename",
+        "IsTrue": true,
+        "Count": 2
+    }
+]
