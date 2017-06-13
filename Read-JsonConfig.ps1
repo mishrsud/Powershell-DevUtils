@@ -3,7 +3,7 @@
 #>
 
 param (
-    [Parameter(Mandatory=$true)]
+    [Parameter(Mandatory = $true)]
     [string]$ConfigPath
 )
 
@@ -19,13 +19,17 @@ function Read-Config () {
     }
 }
 
-$config = Read-Config
+$configValues = Read-Config
 
-# Use the dot-notation to get the value of a prperty
-$name = $config."Name"
+foreach ($config in $configValues) {
+    # Use the dot-notation to get the value of a prperty
+    $name = $config.Name
 
-# Use the Select-Object cmdlet 
-$isTrue = $config | Select-Object -ExpandProperty "IsTrue"
-$count = $config | Select-Object -ExpandProperty "Count"
+    # Use the dot notation - second variant
+    $isTrue = $config."IsTrue"
 
-Write-Verbose "Name: $name, IsTrue: $isTrue, Count: $count"
+    # Use the Select-Object cmdlet 
+    $count = $config | Select-Object -ExpandProperty "Count"
+
+    Write-Verbose "Name: $name, IsTrue: $isTrue, Count: $count"    
+}
