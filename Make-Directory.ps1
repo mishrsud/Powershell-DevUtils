@@ -10,7 +10,7 @@ param (
 
 $dontRun = $WhatIfPreference
 
-function Push-Image () {
+function Create-Directory () {
    if ($WhatIfPreference) {
     Write-Host "returning"
     return
@@ -21,4 +21,4 @@ function Push-Image () {
 
 Write-Host "Dont run = $dontRun"
 
-Push-Image -Path $Path
+Create-Directory -Path $Path
