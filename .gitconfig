@@ -1,2 +1,3 @@
-user.name "Sudhanshu Mishra"
-user.email "mailsudhanshumishra@gmail.com"
+[user]
+    name = Sudhanshu Mishra
+    email = mailsudhanshumishra@gmail.com
