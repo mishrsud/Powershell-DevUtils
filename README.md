@@ -1,3 +1,7 @@
 # Summary
 
-This repository contains powershell samples from my experiments
+This repository contains PowerShell cmdlets to automate common dev tasks
+
+# License
+
+MIT License
